@@ -35,5 +35,5 @@ def start_again():
             print("Error: please input either '0' or '1'")
 
 
-def index_selector():
+# def index_selector():
     

@@ -102,9 +102,14 @@ def index_selector():
             frequent.clear()
             print("Error: Please select a contact from the list")
 
-
 def delete_contact():
     db.print_contacts()
     id_to_delete = index_selector()
-    #FINISH THIS!!!!!!
-            
+    try:
+        db.delete_contact(id_to_delete)
+        print("Contact Deleted")
+        frequent.start_again()
+        
+    except Exception as e:
+        print("Error:", e) 
+    

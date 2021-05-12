@@ -17,8 +17,6 @@ connection = pymysql.connect(
 
 cursor = connection.cursor()
 
- 
-    
     
 def create_db():
     """Method to create the database or not it if already exists."""
@@ -27,8 +25,7 @@ def create_db():
     cursor.execute(sql)
     connection.commit()
     
-    
-    
+
 def create_table():
     
     sql = '''CREATE TABLE IF NOT EXISTS contacts (contact_id INT NOT NULL AUTO_INCREMENT,
@@ -76,3 +73,9 @@ def get_ids_from_db(list):
     for result in search_terms:
         list.append(result[0])
     return list
+
+
+def delete_contact(id):
+    sql = f"DELETE FROM contacts WHERE contact_id = {item_index}"
+    cursor.execute(sql)
+    connection.commit()

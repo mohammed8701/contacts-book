@@ -4,12 +4,9 @@ import menus
 import db
 
 # TO DO:
-# menu options
-# 1. view contacts 2. add contact 3. update contact 4. delete contact 5. search contacts
-
+# 1. update contact 2. search contacts
 
 def start_app():
-    
     
     print("Welcome to your Contacts Book\n")
     print('''Show Contacts: '1'
@@ -45,6 +42,8 @@ Save Contacts & Exit: '0' ''')
         
     
 def main():
+    db.create_db()
+    db.create_table()
     frequent.clear()
     start_app()    
     
