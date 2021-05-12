@@ -17,13 +17,7 @@ connection = pymysql.connect(
 
 cursor = connection.cursor()
 
-#see if you can find mysql in class form
-
-# class AddressSQLCommands(self):
-#     def __init__(self, connnection)
-    
-    
-    
+ 
     
     
 def create_db():
