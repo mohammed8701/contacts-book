@@ -13,10 +13,10 @@ Use the `git clone` command and paste the clone URL then press enter :
 $ git clone https://github.com/your-username/your-repositary.git
 ```
 
-2. On your local machine go inside of the *pop-up-cafe* directory :
+2. On your local machine go inside of the *Contacts-Book* directory :
 
 ```shell
-$ cd generation-mini-project
+$ cd contacts-book
 ```
 
 ### Create Docker Container for MySQL DB
@@ -41,9 +41,44 @@ http://localhost:8080/
 
 4. Fill in the username (`root`) and password field (`password`), leave the database field blank.
 
-5. Select `SQL Command` on the left.
-6. We'll create our own database with:
 
+
+### Creating And Activating The Virtual Environment
+Creating the virtual environment
+
+On macOS and Linux:
+
+```shell
+python3 -m venv .venv
 ```
-CREATE DATABASE popupcafe;
+On Windows:
+```shell
+py -m venv .venv
+```
+Activate the virtual environment
+Windows: 
+```shell
+$ source venv/Scripts/activate
+```
+MacOS/Unix: 
+```shell
+$ source venv/bin/activate
+```
+
+## Prerequisites
+
+The requirements to run the project are:<br/>
+cffi==1.14.4<br/>
+cryptography==3.2.1<br/>
+pycparser==2.20<br/>
+PyMySQL==0.10.1<br/>
+python-dotenv==0.15.0<br/>
+six==1.15.0<br/>
+cffi==1.14.4<br/>
+pytest==6.2.4<br/>
+
+To install these requirements, run in the terminal:
+
+```shell
+$ pip install -r requirements.txt
 ```
