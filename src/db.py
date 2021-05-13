@@ -16,7 +16,8 @@ connection = pymysql.connect(
 )
 
 cursor = connection.cursor()
-
+# create class for the connection
+# change all of these to methods inside a class 
     
 def create_db():
     """Method to create the database or not it if already exists."""
